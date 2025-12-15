@@ -14,21 +14,21 @@ class _EndDrawerPersoState extends State<EndDrawerPerso> {
       child: ListView(
         children: [
           SizedBox(
+
             height: 100,
             child: DrawerHeader(
               decoration: BoxDecoration( 
                 color: Theme.of(context).colorScheme.primary,
               ),
               child: Text("Menu"),
-              
-                
-              
               ),
           ),
           Divider(color: Theme.of(context).colorScheme.primary,thickness: 2),
-          ListTile(
+
+             ListTile(
             leading: Icon(Icons.home),
-            tileColor: Theme.of(context).colorScheme.tertiary,
+            tileColor: Theme.of(context).colorScheme.secondary,
+
             title: Text("Accueil"),
             
             onTap: (){
@@ -40,6 +40,7 @@ class _EndDrawerPersoState extends State<EndDrawerPerso> {
             } 
             
           ),
+
           Divider(color: Theme.of(context).colorScheme.primary,thickness: 2),// thickness c'est pour gérer la taille du divider
           ListTile(
             leading: Icon(Icons.countertops),
@@ -55,6 +56,7 @@ class _EndDrawerPersoState extends State<EndDrawerPerso> {
             } 
             
           ),
+
           Divider(color: Theme.of(context).colorScheme.primary,thickness: 2),
 
           ListTile(
@@ -71,6 +73,7 @@ class _EndDrawerPersoState extends State<EndDrawerPerso> {
             } 
             
           ),
+
           Divider(color: Theme.of(context).colorScheme.primary,thickness: 2),
 
          ListTile(

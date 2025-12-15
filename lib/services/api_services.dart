@@ -1,6 +1,7 @@
 import 'dart:convert';
-
 import 'package:http/http.dart' as http; //importation du package pour gérer les liens des sites http 
+import 'package:http/http.dart' as http;
+
 
 class ApiServices {
   static final ApiServices _singleton = ApiServices._internal();
@@ -8,6 +9,7 @@ class ApiServices {
   ApiServices._internal(); // Un Constructeur privé
 
   factory ApiServices() => _singleton; // pour gagner en performance car il seront mis dans la même case mémoire
+
 
   Future<dynamic> getData (String url) async {// la fonction async qui retourne un résultat et ce résultat est appelé un "future"
       try {
@@ -18,7 +20,9 @@ class ApiServices {
           throw ("Erreur de chargement : code : ${response.statusCode}. Raison : ${response.reasonPhrase}");
         }
       } catch(e, stackTrace){
+
         print("$e ----- $stackTrace"); //le stackTrace sert à mettre les détails de l'erreur
+
       }
   }
 }

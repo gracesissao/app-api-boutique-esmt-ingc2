@@ -12,7 +12,8 @@ class PageAccueil extends StatefulWidget {
 
 class _PageAccueilState extends State<PageAccueil> {
   List<Map<String, dynamic>> data = [];
-  bool _isloading = false; //création de la variable de type booléen et initialisation à "false"
+
+  bool _isloading = false; //création de la variable de type booléen et initialisation à "fa
   @override
   void initState() { // ne s'exécute qu'une seule fois lorsque la page est lancée et on appelle l'api et on recupère les valeurs dans cette methode
     // TODO: implement initState
@@ -32,7 +33,6 @@ class _PageAccueilState extends State<PageAccueil> {
     });
   }
   @override
-
   Widget build(BuildContext context) {
     return Scaffold(
       endDrawer: EndDrawerPerso(),
@@ -52,7 +52,8 @@ class _PageAccueilState extends State<PageAccueil> {
             ),
             borderRadius: BorderRadius.circular(10),
           ),
-          // child: condition ? (valeur si vrai) : (valeur si faux) : ((si données non vide) ? (affichage) : (affichage texte aucune données)),//définir une condition ternaire,
+
+          // child: condition ? (valeur si vrai) : (valeur si faux) : ((si données non vide) ? (affivhage) : (affichage texte aucune données)),//définir une condition ternaire,
                      child: _isloading 
                         ? CircularProgressIndicator() :
                       ((data.length > 0) ?  

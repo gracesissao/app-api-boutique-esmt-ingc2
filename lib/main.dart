@@ -6,6 +6,8 @@ import 'package:flutter/material.dart';
 
 import 'utils/theme_perso.dart';
 
+
+
 void main (){
   runApp(MonAppli());
 }
@@ -21,7 +23,11 @@ class MonAppli extends StatelessWidget {
       themeMode: ThemeMode.system,
         theme: ThemePerso.modeClair, //L'attribut theme est utilisé por le mode clair
         darkTheme: ThemePerso.modeSombre, //L'attribut "darkTheme" pour mode sombre
+
         initialRoute: Routeur.routeInitiale, //ici on pouvait appeler explicitement la route "/accueil" mais on a préféré passer par un appel implicite (c'est à dire création de variable)
+
+        
+
         onUnknownRoute: (settings) => 
         MaterialPageRoute(builder: (context) => const PageAccueil()),
                           routes: Routeur.routes,
